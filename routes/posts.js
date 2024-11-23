@@ -6,6 +6,9 @@ const postSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
+  image:{
+    type: String,
+  },
   currentDate: {
     type: Date,
     default: Date.now, // Automatically sets the date when the post is created

@@ -25,7 +25,7 @@ const userSchema = new mongoose.Schema({
     required: true,
     trim: true,
   },
-  dp: {
+  image: {
     type: String, // URL or path for the display picture
     default: '',  // Optional, can be set to a default value or empty string
   },

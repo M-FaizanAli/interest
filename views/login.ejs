@@ -13,23 +13,27 @@
       <img src="https://i.pinimg.com/originals/d3/d1/75/d3d175e560ae133f1ed5cd4ec173751a.png" alt="pin logo"
         class="img1" />
       <p class="header">Login Account</p>
-      <form action="/login" method="post">
-        <input type="text" name="username" placeholder="User Name" class="detail" /><br />
-        <input type="password" name="password" placeholder="Password" class="detail" />
-        <input type="submit" class="btn int" value="Sign Up">
-      </form>
-
-      <!-- Footer -->
-      <footer>
-        <p>
-          By continuing, you agree to Interest's
-          <b>Terms of Service, Privacy policy.</b>
+      <% if(error.length> 0){ %>
+        <p class="error">
+          <%= error %>
         </p>
-        <hr />
-        <p>Already have an Account? <a href="/">Sign Up</a></p>
-      </footer>
+        <% } %>
+          <form action="/login" method="post">
+            <input type="text" name="username" placeholder="User Name" class="detail" /><br />
+            <input type="password" name="password" placeholder="Password" class="detail" />
+            <input type="submit" class="btn int" value="Sign In">
+          </form>
+
+          <!-- Footer -->
+          <footer>
+            <p>
+              By continuing, you agree to Interest's
+              <b>Terms of Service, Privacy policy.</b>
+            </p>
+            <hr />
+            <p>Don't have an account? <a href="/">Sign Up</a></p>
+          </footer>
     </div>
   </div>
 </body>
-
 </html>
